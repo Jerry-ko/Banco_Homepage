@@ -1,0 +1,45 @@
+.seungramdo__text-box {
+  width: 49.5%;
+}
+.seungramdo__empty-box {
+  width: 5%;
+}
+.seungramdo__image-box {
+  width: 45.5%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.up-on-scroll__y-left,
+.up-on-scroll__x-right {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1.3s;
+}
+img.up-on-scroll__x-right {
+  transition-duration: 1s;
+}
+.up-on-scroll__x-right.seungramdo__description {
+  transition-duration: 1.6s;
+}
+
+/* 스마트폰 세로형*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
+  .seungramdo__image-box {
+    order: 1;
+  }
+  .seungramdo__image-box img {
+    width: 180%;
+  }
+}
+
+/* 스마트폰 가로형 */
+@media only screen and (min-device-width: 568px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .Seungramdo__text-box {
+    height: inherit;
+    display: block;
+    height: auto;
+    width: 100%;
+    float: left;
+  }
+}

@@ -1,0 +1,106 @@
+.action-golf__text-box {
+  width: 43%;
+  align-items: flex-end;
+}
+
+.action-golf__image-box {
+  width: 57.5%;
+  position: relative;
+}
+
+.action-golf__image-box > .action-golf__mobile {
+  position: absolute;
+  top: -148px;
+  left: 40px;
+}
+
+.action-golf__image-box > .action-golf__app-icon {
+  position: absolute;
+  top: -188px;
+  left: 242px;
+}
+
+.up-on-scroll__x-left,
+.up-on-scroll__y-right {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1s;
+}
+
+.up-on-scroll__x-left.action-golf__title,
+.up-on-scroll__y-right.action-golf__mobile {
+  transition-duration: 1.3s;
+}
+
+.up-on-scroll__x-left.action-golf__description,
+.up-on-scroll__y-right.action-golf__app-icon {
+  transition-duration: 1.6s;
+}
+
+/* 스마트폰 세로형 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
+  .action-golf__image-box > .action-golf__mobile {
+    width: 140%;
+    top: 0;
+    left: -36%;
+  }
+  .action-golf__image-box > .action-golf__app-icon {
+    width: 120%;
+    top: 0;
+    left: 25%;
+  }
+}
+
+/* 스마트폰 가로형 */
+@media only screen and (min-device-width: 568px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .action-golf__text-box {
+    height: inherit;
+    display: block;
+    height: auto;
+    width: 100%;
+    float: left;
+  }
+
+  .action-golf__text-box > .action-golf__text-box-inside {
+    width: 100%;
+    margin-top: -300px;
+    padding-left: 20px;
+  }
+
+  .action-golf__text-box-inside > .action-golf__main {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.3;
+    word-break: keep-all;
+    color: #3b3b3b;
+  }
+
+  .action-golf__text-box-inside > .action-golf__sub {
+    width: 100%;
+    font-size: 14px !important;
+    word-break: keep-all;
+    line-height: 1.5;
+    margin-top: 12px !important;
+  }
+
+  .action-golf__text-box-inside .action-golf__sub br {
+    display: none !important;
+  }
+
+  .action-golf__image-box {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .action-golf__image-box > .action-golf__mobile {
+    width: 150%;
+    top: 100px;
+    left: -100%;
+  }
+  .action-golf__image-box > .action-golf__app-icon {
+    width: 150%;
+    top: 80px;
+    left: -80%;
+  }
+}

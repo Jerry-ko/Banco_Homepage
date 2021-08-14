@@ -1,0 +1,40 @@
+.edu-block__text-box {
+  width: 46.7%;
+  align-items: flex-end;
+}
+
+.edu-block__image-box {
+  width: 53.3%;
+  position: relative;
+}
+
+.edu-block__image-box > img {
+  position: absolute;
+  top: -200px;
+  left: 130px;
+}
+
+.up-on-scroll__x-left,
+.up-on-scroll__y {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1.3s;
+}
+
+.up-on-scroll__x-left.edu-block__title {
+  transition-duration: 1s;
+}
+
+.up-on-scroll__x-left.edu-block__description {
+  transition-duration: 1.6s;
+}
+
+/* 스마트폰 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
+  .edu-block__image-box > img {
+    /* position: static; */
+    width: 150%;
+    top: 0px;
+    left: -25%;
+  }
+}

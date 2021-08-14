@@ -1,0 +1,34 @@
+.banco-chain__text-box {
+  width: 49%;
+}
+.banco-chain__empty-box {
+  width: 2%;
+}
+.banco-chain__image-box {
+  width: 49%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.up-on-scroll__y,
+.up-on-scroll__x-right {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1.3s;
+}
+img.up-on-scroll__x-right {
+  transition-duration: 1s;
+}
+.up-on-scroll__x-right.banco-chain__description {
+  transition-duration: 1.6s;
+}
+
+/* 스마트폰 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait) {
+  .banco-chain__image-box {
+    order: 1;
+  }
+  .banco-chain__image-box img {
+    width: 200%;
+  }
+}

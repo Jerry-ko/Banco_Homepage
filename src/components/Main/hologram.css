@@ -1,0 +1,47 @@
+.hologram__text-box {
+  width: 44.2%;
+  align-items: flex-end;
+}
+
+.hologram__image-box {
+  width: 55.8%;
+  position: relative;
+  filter: drop-shadow(0px 14px 16px #b6b6b6);
+  z-index: 10;
+}
+
+.hologram__image-box > img {
+  position: absolute;
+  top: -185px;
+  left: 113px;
+}
+
+.up-on-scroll__y {
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 1s;
+}
+
+.up-on-scroll__x-left,
+.up-on-scroll__y {
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1.3s;
+}
+
+img.up-on-scroll__x-left {
+  transition-duration: 1s;
+}
+
+.up-on-scroll__x-left.hologram__description {
+  transition-duration: 1.6s;
+}
+
+/* 스마트폰 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 500px) and (orientation: portrait),
+  only screen and (min-device-width: 568px) and (max-device-width: 900px) and (orientation: landscape) {
+  .hologram__image-box > img {
+    /* position: static; */
+    width: 160%;
+    top: 0;
+    left: -30%;
+  }
+}
